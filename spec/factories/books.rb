@@ -1,10 +1,10 @@
 FactoryBot.define do
   factory :book do
-    title { "MyString" }
+    title { Faker::Book.title }
     presentation { "MyString" }
-    edition { 1 }
-    language { "MyString" }
-    number_of_pages { 1 }
-    ISBN { 1 }
+    edition { Faker::Number.number(1) }
+    language { Faker::Nation.language }
+    number_of_pages { Faker::Number.number(4) }
+    ISBN { Faker::Number.number(10) }
   end
 end
