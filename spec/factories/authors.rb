@@ -1,8 +1,8 @@
 FactoryBot.define do
   factory :author do
-    name { "MyString" }
-    age { 1 }
-    natinality { "MyString" }
-    published_book { "" }
+    name { Faker::Book.author }
+    age { Faker::Number.between(20, 90) }
+    natinality { Faker::Nation.nationality }
+    published_book { Faker::Number.number(2) }
   end
 end
