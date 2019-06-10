@@ -23,12 +23,12 @@ ActiveRecord::Schema.define(version: 2019_06_10_152915) do
   end
 
   create_table "books", force: :cascade do |t|
-    t.string "title"
+    t.string "title", null: false
     t.string "presentation"
-    t.integer "edition"
-    t.string "language"
+    t.integer "edition", null: false
+    t.string "language", null: false
     t.integer "number_of_pages"
-    t.integer "ISBN"
+    t.integer "ISBN", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
