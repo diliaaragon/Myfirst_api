@@ -13,7 +13,8 @@
 ActiveRecord::Schema.define(version: 2019_06_10_144158) do
 
   create_table "authors", force: :cascade do |t|
-    t.string "name"
+    t.string "first_name"
+    t.string "last_name"
     t.integer "age"
     t.string "natinality"
     t.integer "published_book"
