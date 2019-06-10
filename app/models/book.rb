@@ -1,6 +1,6 @@
 class Book < ApplicationRecord
-  validates :title, precense: true, uniqueness: true
-  validates :edition, precense: true
-  validates :lenguage,  precense: true
-  validate :ISBN, precense: true
+  validates :title, presence: true
+  validates :edition, presence: true
+  validates :lenguage,  presence: true
+  validates :ISBN, presence: true, uniqueness: true
 end
