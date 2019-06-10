@@ -1,6 +1,6 @@
 class Author < ApplicationRecord
-  validate :first_name, presence: true, length: { minimun: 4 }
-  validate :last_name, presence: true, length: { minimun: 4 }
-  validate :age, presence: true
-  validate :natinality, presence: true
+  validates :first_name, presence: true, length: { minimum: 4 }
+  validates :last_name, presence: true, length: { minimum: 4 }
+  validates :age, presence: true
+  validates :nationality, presence: true
 end
