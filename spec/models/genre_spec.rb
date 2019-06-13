@@ -1,14 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Genre, type: :model do
-  it 'is valid with name' do
-    genre = build(:genre)
-    expect(genre).to be_valid
-  end
+  subject {  FactoryBot.create(:genre) }
 
-  it 'is invalid with name that already exist' do
-    genre_create = create(:genre, name: 'literary')
-    genre = build(:genre, name: 'literary')
-    expect(genre).to_not be_valid
+  describe 'validate' do
+    it {is_expected.to validate_presence_of(:name) }
   end
 end
