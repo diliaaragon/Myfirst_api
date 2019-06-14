@@ -40,5 +40,11 @@ module MyfirstApi
       g.routing_specs false
       g.request_specs false
     end
+
+    config.middleware.use ActionDispatch::Flash
+    config.middleware.use ActionDispatch::Cookies
+    config.middleware.use ActionDispatch::Session::CookieStore
+    config.api_only = false
+
   end
 end
