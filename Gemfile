@@ -6,7 +6,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.1'
 
+gem 'activeadmin', '~> 2.1.0'
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'devise', '~> 4.6.2'
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 5.2.3'
 gem 'sqlite3'
