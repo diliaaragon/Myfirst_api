@@ -1,5 +1,6 @@
 FactoryBot.define do
   factory :genre do
-   name { Faker::Book.genre }
+    sequence(:name) { |n| "Caspian Star #{n}" }
   end
 end
+
