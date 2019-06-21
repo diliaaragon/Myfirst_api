@@ -2,6 +2,7 @@ class BooksController < ApplicationController
   include Response
   include ExceptionHandler
 
+  before_action :authenticate_user, only: [ :create, :update, :destroy ]
   before_action :set_book, only: [ :show, :update, :destroy ]
 
   def index
