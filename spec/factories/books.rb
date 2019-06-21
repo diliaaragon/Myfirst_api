@@ -6,5 +6,6 @@ FactoryBot.define do
     language { Faker::Nation.language }
     number_of_pages { Faker::Number.number(4) }
     ISBN { Faker::Number.number(10) }
+    author
   end
 end
