@@ -19,7 +19,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    json_response(@publisher)
+    json_response(@user)
   end
 
   def update
@@ -34,8 +34,8 @@ class UsersController < ApplicationController
 
   private
 
-  def user_params
-    params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation)
+  def params_user
+    params.permit(:first_name, :last_name, :email, :password)
   end
 
   def set_user
