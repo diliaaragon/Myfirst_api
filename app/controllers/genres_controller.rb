@@ -1,7 +1,8 @@
 class GenresController < ApplicationController
   include Response
   include ExceptionHandler
-  
+
+  before_action :authenticate_user, only: [:create, :update, :destroy ]
   before_action :set_genre, only: [ :show, :update, :destroy ]
 
   def index
