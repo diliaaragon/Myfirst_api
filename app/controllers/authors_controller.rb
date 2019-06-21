@@ -2,6 +2,7 @@ class AuthorsController < ApplicationController
   include Response
   include ExceptionHandler
 
+  before_action :authenticate_user, [ :create, :update, :destroy ]
   before_action :set_author, only: [ :show, :update, :destroy ]
 
   def index
