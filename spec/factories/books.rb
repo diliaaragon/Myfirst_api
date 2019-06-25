@@ -1,3 +1,5 @@
+require 'faker'
+
 FactoryBot.define do
   factory :book do
     title { Faker::Book.title }
@@ -6,5 +8,6 @@ FactoryBot.define do
     language { Faker::Nation.language }
     number_of_pages { Faker::Number.number(4) }
     ISBN { Faker::Number.number(10) }
+    association :publisher
   end
 end
